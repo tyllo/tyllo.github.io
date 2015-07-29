@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+  </head>
+  <body>
+    <header>
+      <div class="row">
+        <div class="small-10 medium-6 columns"><a href="index.html" class="logo"><img src="assets/images/dd_logo.svg"></a></div>
+        <div class="small-6 columns hide-for-small text-right">
+          <div class="top-menu-container">
+            <ul class="top-menu box">
+              <li><a href="production.html"><span>ПРОИЗВОДСТВО</span></a>
+              </li>
+              <li><a href="products.html"><span>ПРОДУКЦИЯ</span></a>
+              </li>
+              <li class="active"><a href="contacts.html"><span>КОНТАКТЫ</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="small-2 columns">
+          <!--.top-menu-container-->
+          <div class="mobile-menu">
+            <input id="mobile-menu_nav-trigger" type="checkbox" class="mobile-menu_nav-trigger">
+            <label for="mobile-menu_nav-trigger" class="mobile-menu_nav-trigger-ico"><span></span></label>
+            <div class="mobile-menu_list-w">
+              <ul class="mobile-menu_list">
+                <li><a href="production.html"><span>ПРОИЗВОДСТВО</span></a>
+                </li>
+                <li><a href="products.html"><span>ПРОДУКЦИЯ</span></a>
+                </li>
+                <li class="active"><a href="contacts.html"><span>КОНТАКТЫ</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="content">
+      <!-- блок контактов-->
+      <div class="contacts-container">
+        <section class="product-item-text contacts">
+          <header class="line">
+            <div class="row">
+              <div class="medium-12 columns">
+                <h3 class="text-center">Телефоны отделов продаж</h3>
+              </div>
+            </div>
+          </header>
+          <section class="content">
+            <div class="row">
+              <div class="medium-6 columns">
+                <div class="medium-right small-text-centered">
+                  <div class="town-1"><span>Владивосток</span>&ensp;<span>(423)&nbsp;245-02-98,&nbsp;245-78-19</span></div>
+                  <div class="town-1"><span>Хабаровск</span>&ensp;<span>(4212)&nbsp;52-57-04,&nbsp;52-56-11</span></div>
+                  <div class="town-1"><span>Находка</span>&ensp;<span>(4236)&nbsp;74-55-93,&nbsp;74-88-43</span></div>
+                  <div class="town-1"><span>Уссурийск</span>&ensp;<span>(4234)&nbsp;34-36-41,&nbsp;37-19-66</span></div>
+                </div>
+              </div>
+              <div class="medium-6 columns">
+                <div class="small-text-centered">
+                  <div class="town-2"><span>Южно-Сахалинск</span>&ensp;<span>(4242)&nbsp;77-74-15,&nbsp;77-97-18</span></div>
+                  <div class="town-2"><span>Комсомольск-на-Амуре</span>&ensp;<span>(4217)&nbsp;22-15-90</span></div>
+                  <div class="town-2"><span>Петропавловск-Камчатский</span>&ensp;<span>+7&nbsp;914&nbsp;023-00-00</span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="content">
+            <div class="row">
+              <div class="medium-12 columns">
+                <div class="sender text-center"><a href="#form" data-modal-id="form-send" class="btn">ОТПРАВИТЬ СООБЩЕНИЕ</a></div>
+              </div>
+            </div>
+          </section>
+          <footer></footer>
+        </section>
+      </div>
+    </section>
+    <footer>
+      <div class="row collapse">
+        <div class="medium-12 columns">
+          <div class="logo"><a href="http://www.websee.ru"><img src="assets/images/websee_logo.svg"></a></div>
+        </div>
+      </div>
+    </footer>
+    <div id="form-send" class="modal-container hidden">
+      <div class="row collapse">
+        <div class="medium-6 small-centered columns">
+          <div class="modal">
+            <section class="title">
+              <div class="row">
+                <div class="medium-12 columns">
+                  <h3>Форма обратной связи</h3><a href="#close">&times;</a>
+                </div>
+              </div>
+            </section>
+            <section class="content">
+              <form action="/form" class="ajax">
+                <div class="row">
+                  <div class="medium-12 columns">
+                    <p>Задайте вопрос или отправьте нам сообщение с помощью данной формы</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="medium-4 columns">
+                    <label>Ваше имя</label>
+                  </div>
+                  <div class="medium-8 columns">
+                    <input type="text" name="name" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="medium-4 columns">
+                    <label>Электронная почта</label>
+                  </div>
+                  <div class="medium-8 columns">
+                    <input type="email" name="email" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="medium-12 end columns">
+                    <textarea name="question" rows="6" placeholder="Ваше сообщение..."></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="medium-12 end columns">
+                    <div class="text-center">
+                      <button type="submit" class="btn">Отправить сообщение</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/vendors/jquery.min.js"></script>
+    <script>jQuery(document).ready(function ($) {
+
+  var $modals = $('a[data-modal-id]');
+
+  // покажем модальное окно
+  $modals.click(function (e) {
+    e.preventDefault();
+    var id = $(e.currentTarget).attr('data-modal-id');
+    $('#' + id).toggleClass('hidden');
+    $('body').toggleClass('overflow');
+  });
+
+  // скроем модальное окно
+  $('a[href="#close"]').click(function (e) {
+    e.preventDefault();
+    $(e.currentTarget).closest('.modal-container').toggleClass('hidden');
+    $('body').toggleClass('overflow');
+  });
+
+});
+
+    </script>
+    <script>jQuery(document).ready(function ($) {
+
+  var $form = $('form.ajax');
+
+  $form.on('submit', function (e) {
+    var $button = $(this).find('button[type="submit"]');
+    var text = $button.text();
+    $button
+      .prop('disabled', true)
+      .text('отправляется...');
+
+    // отправим данные формы
+    sendForm(this);
+
+    $button
+      .text(text)
+      .prop('disabled', false);
+
+    return false;
+  });
+
+});
+
+var sendForm = function(form){
+  var post = $(form).serializeArray();
+  console.log(post);
+  var url = $(form).attr('action');
+  $.post(url, post)
+    .fail(function () {
+      alert('Произошла ошибка');
+      // return '404';
+    })
+    .done(function (res) {
+      if(res.error != undefined)
+        alert(res.error);
+      else if(!res.status) {
+        alert('Сообщение не отправлено');
+        $(form)[0].reset();
+        // return '500';
+      } else {
+        alert('Успешно отправлено');
+        $(form)[0].reset();
+        // return '200';
+      }
+    });
+  return false;
+};
+    </script>
+  </body>
+</html>
