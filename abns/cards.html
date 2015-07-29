@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система хранения и генерации выписок и информирования об остатке средств на счетах клиентов</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+  </head>
+  <body class="bg-gray">
+    <header>
+      <div class="line"></div>
+      <div class="row medium-collapse">
+        <div class="medium-5 columns"><a href="index.html"><img src="images/logo_nnk_aliance.svg" class="logo"></a><span class="logo">АО&nbsp;&laquo;ННК-БАЙКАЛНЕФТЕСБЫТ&raquo;</span></div>
+        <div class="medium-7 columns text-right"><span class="icon-user">username@mail.ru</span><a href="index.html" class="dashed">Выход</a></div>
+      </div>
+      <div class="row medium-collapse">
+        <div class="medium-12 columns">
+          <div class="text-right"><a href="http://khnp.aoil.ru" class="icon-site"><span class="hide-for-small">Официальный сайт</span></a><a href="#" data-modal-id="contact" class="icon-bubble-info"><span class="hide-for-small">Контактная информация</span></a><a href="#" data-modal-id="question" class="icon-bubble-text-left"><span class="hide-for-small">Задать вопрос</span></a></div>
+          <div id="contact" class="modal-container row collapse">
+            <div class="modal medium-6 medium-centered columns">
+              <header class="container"><span>Контактная информация</span><a href="#close">&#215;</a></header>
+              <section id="map" class="overflow">
+                <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=basic"></script>
+              </section>
+              <footer class="container">
+                <div class="row collapse">
+                  <div class="medium-6 columns">
+                    <strong>Адрес местонахождения</strong>
+                    <br>680000, Хабаровский край, г. Хабаровск, ул. Тихоокеанская, 38.
+                    <br>(Центр обслуживания клиентов.)
+                    <br>e-mail: <a href='mailto:obr-khnp@ipc-oil.ru'>obr-khnp@ipc-oil.ru</a>
+                  </div>
+                  <div class="medium-6 columns">
+                    <strong>Отдел безналичных расчетов</strong>
+                    <br>Начальник отдела - Вишневский Максим Васильевич
+                    
+                    <br><br><strong>Телефоны:</strong>
+                    <br>Тел.: 8 (4212) 79-41-23, 8 (4212) 79-41-12
+                    <br>Тел./факс 8 (4212) 79-41-54
+                  </div>
+                </div>
+              </footer>
+            </div>
+            <script>
+              var map, coordinate = [48.4962214640, 135.0396537781];
+              DG.then(function () {
+                map = DG.map('map', {
+                  center: coordinate,
+                  zoom: 16,
+                  animate: true
+                });
+                DG.marker(coordinate,{draggable: false}).addTo(map);
+              });
+            </script>
+          </div>
+          <div id="question" class="modal-container row collapse">
+            <div class="modal medium-6 medium-centered columns">
+              <header class="container"><span>Форма обратной связи</span><a href="#close">&#215;</a></header>
+              <form name="question" action="#" method="GET">
+                <section class="container">
+                  <div class="row collapse">
+                    <div class="small-12 columns">
+                      <p>Воспользуйтесь данной формой, для того, чтобы отправить ваш вопрос или сообщение в отдел безналичных расчетов . Мы обязательно получим ваше сообщение!</p>
+                    </div>
+                  </div>
+                  <div class="row collapse">
+                    <div class="medium-12 columns">
+                      <textarea name="question" rows="4" placeholder="Ваше сообщение..."></textarea>
+                    </div>
+                  </div>
+                </section>
+                <footer class="container">
+                  <div class="row collapse">
+                    <div class="medium-6 small-centered columns">
+                      <button type="submit" class="btn">Отправить</button>
+                    </div>
+                  </div>
+                </footer>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="content">
+      <div class="row collapse">
+        <div class="medium-12 collumns">
+          <div class="cards">
+            <header>
+              <div class="row collapse">
+                <div class="medium-12 columns">
+                  <ul class="usermenu_groups">
+                    <li class="active">Информация по картам</li>
+                    <li><a href="reserves.html">Заведение резервов</a></li>
+                  </ul>
+                </div>
+              </div>
+            </header>
+            <article class="cards-all">
+              <section class="container title">
+                <div class="row collapse">
+                  <div class="medium-6 columns">
+                    <h3>Карты</h3>
+                  </div>
+                  <div class="medium-6 columns">
+                    <p>Информация актуальна на <span class='time'>25.06.2015</span></p>
+                  </div>
+                </div>
+              </section>
+              <section class="container subtitle">
+                <div class="row collapse">
+                  <div class="medium-12 columns"><span>Показывать карты:</span>
+                    <label>
+                      <input type="checkbox" name="active_card"><span>активные (20)</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name="block_card"><span>заблокированные (5)</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name="null_card"><span>с нулевым блансом (8)</span>
+                    </label>
+                  </div>
+                </div>
+              </section>
+              <section class="container table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>
+                        <input type="checkbox" name="all">
+                      </th>
+                      <th></th>
+                      <th>Номер карты</th>
+                      <th>Баланс, руб.</th>
+                      <th>Суточный лимит, литров</th>
+                      <th>Разрешение по группе товаров</th>
+                      <th>Дата последней транзакции</th>
+                      <th>Срок действия карты</th>
+                      <th>Сумма резерва, руб.</th>
+                      <th>Дата заведения резерва</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="all">
+                      </td>
+                      <td class="card_active">
+                        <div class="icon-card"></div>
+                      </td>
+                      <td>...12345</td>
+                      <td>965 999,00</td>
+                      <td>10,00</td>
+                      <td>Нефтепродукты</td>
+                      <td>20.06.2015 00:00</td>
+                      <td>20.06.2015 12:58</td>
+                      <td>10 000.00</td>
+                      <td>10.06.2015 22:30</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="all">
+                      </td>
+                      <td class="card_blocked">
+                        <div class="icon-card"></div>
+                      </td>
+                      <td>...12345</td>
+                      <td>965 999,00</td>
+                      <td>10,00</td>
+                      <td>Нефтепродукты</td>
+                      <td>20.06.2015 00:00</td>
+                      <td>20.06.2015 12:58</td>
+                      <td>10 000.00</td>
+                      <td>10.06.2015 22:30</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="all">
+                      </td>
+                      <td>
+                        <div class="icon-card"></div>
+                      </td>
+                      <td>...12345</td>
+                      <td>965 999,00</td>
+                      <td>10,00</td>
+                      <td>АИ-95</td>
+                      <td>20.06.2015 00:00</td>
+                      <td>20.06.2015 12:58</td>
+                      <td>10 000.00</td>
+                      <td>10.06.2015 22:30</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+            </article>
+            <article class="cards-details">
+              <section class="container title">
+                <div class="row collapse">
+                  <div class="small-12 columns">
+                    <h3>Детализация выбранных карт</h3>
+                  </div>
+                </div>
+              </section>
+              <section class="container subtitle">
+                <div class="row collapse">
+                  <div class="medium-12 columns"><span>Показать детализацию с</span>
+                    <input type="text" data-bind name="date_from" class="datepicker"><span>&nbsp;&nbsp;по</span>
+                    <input type="text" data-bind name="date_to" class="datepicker">
+                  </div>
+                </div>
+              </section>
+              <section class="container content">
+                <section class="card-number">
+                  <ul class="usermenu_groups">
+                    <li class="active">1234 5678 9012 3456</li>
+                  </ul>
+                </section>
+                <section class="table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>АЗС</th>
+                        <th>Вид продукта</th>
+                        <th>Цена, руб.</th>
+                        <th>Заказано,<br>литров</th>
+                        <th>Отпущено,<br>литров</th>
+                        <th>Запрошенно<br>(сумма), руб.</th>
+                        <th>Остаток на карте, руб.</th>
+                        <th>Тип транзакции</th>
+                        <th><i class="icon-sort"></i><span>Дата</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>АЗС №3 (АБНС)</td>
+                        <td>АИ-95-K5-GE NEO</td>
+                        <td>36,75</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>715,00</td>
+                        <td>9 651,72</td>
+                        <td>
+                          <div title="дебит" class="icon-debit"></div>
+                        </td>
+                        <td>18.06.2015 22:30</td>
+                      </tr>
+                      <tr>
+                        <td>АЗС №3 (АБНС)</td>
+                        <td>любой</td>
+                        <td>0,00</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>5 000,00</td>
+                        <td>14 652,43</td>
+                        <td>
+                          <div title="кредит" class="icon-credit"></div>
+                        </td>
+                        <td>15.06.2015 22:30</td>
+                      </tr>
+                      <tr>
+                        <td>АЗС №3 (АБНС)</td>
+                        <td>АИ-95-K5-GE NEO</td>
+                        <td>36,75</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>715,00</td>
+                        <td>9 651,72</td>
+                        <td>
+                          <div title="дебит" class="icon-debit"></div>
+                        </td>
+                        <td>18.06.2015 22:30</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </section>
+                <section class="footer">
+                  <div class="row collapse">
+                    <div class="medium-8 columns"><span>Отпущено по каре:</span><span class="icon-coins">189 956,00 руб.</span><span class="icon-jerrycan">123 л.</span></div>
+                    <div class="medium-4 columns text-right"><a href="card/{{ id_card }}/pdf" class="btn icon-doc-pdf">PDF</a><a href="card/{{ id_card }}/xls" class="btn icon-doc-xls">XLS</a></div>
+                  </div>
+                </section>
+              </section>
+              <section class="container content">
+                <section class="card-number">
+                  <ul class="usermenu_groups">
+                    <li class="active">1234 5678 9012 3456</li>
+                  </ul>
+                </section>
+                <section class="table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>АЗС</th>
+                        <th>Вид продукта</th>
+                        <th>Цена, руб.</th>
+                        <th>Заказано,<br>литров</th>
+                        <th>Отпущено,<br>литров</th>
+                        <th>Запрошенно<br>(сумма), руб.</th>
+                        <th>Остаток на карте, руб.</th>
+                        <th>Тип транзакции</th>
+                        <th><i class="icon-sort"></i><span>Дата</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>АЗС №3 (АБНС)</td>
+                        <td>АИ-95-K5-GE NEO</td>
+                        <td>36,75</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>715,00</td>
+                        <td>9 651,72</td>
+                        <td>
+                          <div title="дебит" class="icon-debit"></div>
+                        </td>
+                        <td>18.06.2015 22:30</td>
+                      </tr>
+                      <tr>
+                        <td>АЗС №3 (АБНС)</td>
+                        <td>любой</td>
+                        <td>0,00</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>5 000,00</td>
+                        <td>14 652,43</td>
+                        <td>
+                          <div title="кредит" class="icon-credit"></div>
+                        </td>
+                        <td>15.06.2015 22:30</td>
+                      </tr>
+                      <tr>
+                        <td>АЗС №3 (АБНС)</td>
+                        <td>АИ-95-K5-GE NEO</td>
+                        <td>36,75</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>715,00</td>
+                        <td>9 651,72</td>
+                        <td>
+                          <div title="дебит" class="icon-debit"></div>
+                        </td>
+                        <td>18.06.2015 22:30</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </section>
+                <section class="footer">
+                  <div class="row collapse">
+                    <div class="medium-8 columns"><span>Отпущено по каре:</span><span class="icon-coins">189 956,00 руб.</span><span class="icon-jerrycan">123 л.</span></div>
+                    <div class="medium-4 columns text-right"><a href="card/{{ id_card }}/pdf" class="btn icon-doc-pdf">PDF</a><a href="card/{{ id_card }}/xls" class="btn icon-doc-xls">XLS</a></div>
+                  </div>
+                </section>
+              </section>
+            </article>
+            <article class="cards-total">
+              <section class="container title">
+                <div class="row collapse">
+                  <div class="small-12 columns">
+                    <h3>Сформировать справку</h3>
+                  </div>
+                </div>
+              </section>
+              <section class="container footer">
+                <div class="row collapse">
+                  <div class="medium-8 columns"><span>Всего отпущено:</span><span class="icon-coins">189 956,00 руб.</span><span class="icon-jerrycan">123 л.</span></div>
+                  <div class="medium-4 columns text-right"><a href="card/{{ all_cards }}/pdf" class="btn icon-doc-pdf">PDF</a><a href="card/{{ all_cards }}/xls" class="btn icon-doc-xls">XLS</a></div>
+                </div>
+              </section>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="row medium-collapse">
+        <div class="small-12 columns">
+          <p>&copy; АО&nbsp;&laquo;ННК-БАЙКАЛНЕФТЕСБЫТ&raquo; 2015г.</p>
+          <p><a href='mailto:alliance@a-bns.ru'>alliance@a-bns.ru</a>    отдел безналичных расчетов 8-800-200-03-43    круглосуточная служба клинской поддержки 8-800-200-03-43</p>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vendors/jquery.datetimepicker.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

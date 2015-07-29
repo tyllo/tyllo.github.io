@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система хранения и генерации выписок и информирования об остатке средств на счетах клиентов</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+  </head>
+  <body class="bg-gray">
+    <header>
+      <div class="line"></div>
+      <div class="row medium-collapse">
+        <div class="medium-5 columns"><a href="index.html"><img src="images/logo_nnk_aliance.svg" class="logo"></a><span class="logo">АО&nbsp;&laquo;ННК-БАЙКАЛНЕФТЕСБЫТ&raquo;</span></div>
+        <div class="medium-7 columns text-right"><span class="icon-user">username@mail.ru</span><a href="index.html" class="dashed">Выход</a></div>
+      </div>
+      <div class="row medium-collapse">
+        <div class="medium-12 columns">
+          <div class="text-right"><a href="http://khnp.aoil.ru" class="icon-site"><span class="hide-for-small">Официальный сайт</span></a><a href="#" data-modal-id="contact" class="icon-bubble-info"><span class="hide-for-small">Контактная информация</span></a><a href="#" data-modal-id="question" class="icon-bubble-text-left"><span class="hide-for-small">Задать вопрос</span></a></div>
+          <div id="contact" class="modal-container row collapse">
+            <div class="modal medium-6 medium-centered columns">
+              <header class="container"><span>Контактная информация</span><a href="#close">&#215;</a></header>
+              <section id="map" class="overflow">
+                <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=basic"></script>
+              </section>
+              <footer class="container">
+                <div class="row collapse">
+                  <div class="medium-6 columns">
+                    <strong>Адрес местонахождения</strong>
+                    <br>680000, Хабаровский край, г. Хабаровск, ул. Тихоокеанская, 38.
+                    <br>(Центр обслуживания клиентов.)
+                    <br>e-mail: <a href='mailto:obr-khnp@ipc-oil.ru'>obr-khnp@ipc-oil.ru</a>
+                  </div>
+                  <div class="medium-6 columns">
+                    <strong>Отдел безналичных расчетов</strong>
+                    <br>Начальник отдела - Вишневский Максим Васильевич
+                    
+                    <br><br><strong>Телефоны:</strong>
+                    <br>Тел.: 8 (4212) 79-41-23, 8 (4212) 79-41-12
+                    <br>Тел./факс 8 (4212) 79-41-54
+                  </div>
+                </div>
+              </footer>
+            </div>
+            <script>
+              var map, coordinate = [48.4962214640, 135.0396537781];
+              DG.then(function () {
+                map = DG.map('map', {
+                  center: coordinate,
+                  zoom: 16,
+                  animate: true
+                });
+                DG.marker(coordinate,{draggable: false}).addTo(map);
+              });
+            </script>
+          </div>
+          <div id="question" class="modal-container row collapse">
+            <div class="modal medium-6 medium-centered columns">
+              <header class="container"><span>Форма обратной связи</span><a href="#close">&#215;</a></header>
+              <form name="question" action="#" method="GET">
+                <section class="container">
+                  <div class="row collapse">
+                    <div class="small-12 columns">
+                      <p>Воспользуйтесь данной формой, для того, чтобы отправить ваш вопрос или сообщение в отдел безналичных расчетов . Мы обязательно получим ваше сообщение!</p>
+                    </div>
+                  </div>
+                  <div class="row collapse">
+                    <div class="medium-12 columns">
+                      <textarea name="question" rows="4" placeholder="Ваше сообщение..."></textarea>
+                    </div>
+                  </div>
+                </section>
+                <footer class="container">
+                  <div class="row collapse">
+                    <div class="medium-6 small-centered columns">
+                      <button type="submit" class="btn">Отправить</button>
+                    </div>
+                  </div>
+                </footer>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="content">
+      <div class="row collapse">
+        <div class="medium-12 collumns">
+          <div class="cards">
+            <header>
+              <div class="row collapse">
+                <div class="medium-12 columns">
+                  <ul class="usermenu_groups">
+                    <li><a href="cards.html">Информация по картам</a></li>
+                    <li class="active">Заведение резервов</li>
+                  </ul>
+                </div>
+              </div>
+            </header>
+            <article class="reserve-table">
+              <section class="container title">
+                <div class="row collapse">
+                  <div class="small-12 columns">
+                    <h3>Заявка заявки на заведение резерва №5</h3>
+                  </div>
+                </div>
+              </section>
+              <section class="container subtitle">
+                <div class="row collapse">
+                  <div class="medium-3 columns"><span>Дата заведения резерва:</span></div>
+                  <div class="medium-9 columns"><span><strong>24.06.2015</strong></span></div>
+                </div>
+                <div class="row collapse">
+                  <div class="medium-3 columns"><span>Номер платежного документа:</span></div>
+                  <div class="medium-9 columns"><span><strong>12345</strong></span></div>
+                </div>
+                <div class="row collapse">
+                  <div class="medium-3 columns"><span>Дата создания заявки</span></div>
+                  <div class="medium-9 columns"><span><strong>24.06.2015, 12:45</strong></span></div>
+                </div>
+                <div class="row collapse">
+                  <div class="medium-3 columns"><span>Статус</span></div>
+                  <div class="medium-9 columns"><span><strong>формирование</strong></span></div>
+                </div>
+                <div class="row collapse">
+                  <div class="medium-3 columns"><span>Общая сумма резерва</span></div>
+                  <div class="medium-9 columns"><span><strong>1 000 руб.</strong></span></div>
+                </div>
+              </section>
+              <section class="container table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Номер карты</th>
+                      <th>Сумма резерва</th>
+                      <th>Обнуление резерва<br>на карте</th>
+                      <th>Статус заявки</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1234 5678 9012 123456</td>
+                      <td>
+                        <input type="number" value="10000">
+                      </td>
+                      <td>
+                        <input type="checkbox" checked><span>да</span>
+                      </td>
+                      <td>формирование</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <section class="footer">
+                  <div class="row collapse">
+                    <div class="medium-8 columns"><span>Общая сумма резерва: 10 000 руб.</span></div>
+                  </div>
+                </section>
+              </section>
+              <section class="container reserve-timer">
+                <div class="row collapse">
+                  <div class="small-12 columns">
+                    <div class="timer">До отправки резерва в ОБР осталось
+                      <!-- 15 минут--><span id="time">900</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="container reserve-btn">
+                <div class="row collapse">
+                  <div class="small-12 columns"><a href="reserves.html" class="btn">Сохранить</a></div>
+                </div>
+              </section>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="row medium-collapse">
+        <div class="small-12 columns">
+          <p>&copy; АО&nbsp;&laquo;ННК-БАЙКАЛНЕФТЕСБЫТ&raquo; 2015г.</p>
+          <p><a href='mailto:alliance@a-bns.ru'>alliance@a-bns.ru</a>    отдел безналичных расчетов 8-800-200-03-43    круглосуточная служба клинской поддержки 8-800-200-03-43</p>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vendors/jquery.datetimepicker.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
