@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система хранения и генерации выписок и информирования об остатке средств на счетах клиентов</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+  </head>
+  <body class="bg-login">
+    <header>
+      <div class="line"></div>
+      <div class="row medium-collapse">
+        <div class="medium-5 columns"><a href="index.html"><img src="images/logo_nnk_aliance.svg" class="logo"></a><span class="logo">АО&nbsp;&laquo;ННК-БАЙКАЛНЕФТЕСБЫТ&raquo;</span></div>
+      </div>
+      <div class="row medium-collapse">
+      </div>
+    </header>
+    <section id="login_form" class="content flexbox-container">
+      <div class="row collapse">
+        <div class="medium-9 small-centered columns">
+          <form id="login" name="login" action="login.html" method="GET" class="modal">
+            <header>
+              <div class="row collapse">
+                <div class="small-12 columns">
+                  <div class="container">Добро пожаловать!</div>
+                </div>
+              </div>
+            </header>
+            <section class="container">
+              <div class="row collapse">
+                <div class="small-12 columns">
+                  <p>Личный Кабинет корпоративного клиента АО&nbsp;&laquo;ННК-БАЙКАЛНЕФТЕСБЫТ&raquo; - автоматизированная информационная система, позволяющая клиентам получать выписки по топливным картам и остаткам на корпоративных счетах.</p>
+                </div>
+              </div>
+              <div class="row collapse">
+                <div class="small-12 columns">
+                  <p>Для начала работы введите ваши логин и пароль.</p>
+                </div>
+              </div>
+            </section>
+            <section class="container">
+              <div class="row collapse">
+                <div class="medium-3 columns">
+                  <label>Пользователь:</label>
+                </div>
+                <div class="medium-6 end columns">
+                  <input type="text" name="LoginForm[username]">
+                </div>
+              </div>
+              <div class="row collapse">
+                <div class="medium-3 columns">
+                  <label>Пароль:</label>
+                </div>
+                <div class="medium-6 end columns">
+                  <input type="password" name="LoginForm[password]">
+                </div>
+              </div>
+              <div class="row collapse">
+                <div class="medium-6 medium-offset-3 end columns">
+                  <label>
+                    <input id="login_form_save_id" type="checkbox" name="LoginForm[save]"><span>запомнить меня на этом компьютере</span>
+                  </label>
+                </div>
+              </div>
+            </section>
+            <section class="container">
+              <div class="row collapse">
+                <div class="medium-12">
+                  <p class="error">Неверное имя пользователя или пароль</p>
+                </div>
+              </div>
+            </section>
+            <footer class="container">
+              <div class="row collapse">
+                <div class="medium-11 small-centered columns">
+                  <div class="row small-collapse">
+                    <div class="medium-6 columns"><a href="cards.html" class="btn">Войти</a>
+                    </div>
+                    <div class="medium-6 columns"><a href="restore.html" class="btn">Восстановить пароль</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="row medium-collapse">
+        <div class="small-12 columns">
+          <p>&copy; АО&nbsp;&laquo;ННК-БАЙКАЛНЕФТЕСБЫТ&raquo; 2015г.</p>
+          <p><a href='mailto:alliance@a-bns.ru'>alliance@a-bns.ru</a>    отдел безналичных расчетов 8-800-200-03-43    круглосуточная служба клинской поддержки 8-800-200-03-43</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
