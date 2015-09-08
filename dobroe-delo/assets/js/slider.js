@@ -9,10 +9,12 @@ jQuery(document).ready(function ($) {
     navText: ['&laquo;','&raquo;'],
     items : 1,
     nav: true,
-    autoplay : true,
+    autoplay : false,
     autoplayTimeout: 10000,
     loop:true,
     itemsTablet: true,
+    URLhashListener:true,
+    startPosition: 'URLHash',
   });
 
 });
